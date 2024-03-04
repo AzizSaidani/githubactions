@@ -10,4 +10,4 @@
 # tests 
 
 
-[![Package - Typescript](https://img.shields.io/github/package-json/dependency-version/MichaelCurrin/badge-generator/dev/typescript?logo=typescript&logoColor=white)](https://www.npmjs.com/package/typescript "Go to TypeScript on NPM")
+[![Package - Typescript](https://img.shields.io/github/package-json/dependency-version/AzizSaidani/githubactions/dev/typescript?logo=typescript&logoColor=white)](https://www.npmjs.com/package/typescript "Go to TypeScript on NPM")
