@@ -1,63 +1,61 @@
 {
-	"name": "@devshareacademy/typescript-snowpack-template",
-	"version": "0.0.10",
-	"description": "A basic Typescript web app project template that uses Snowpack.",
-	"scripts": {
-		"init:snowpack": "snowpack init",
-		"start": "snowpack dev --config ./config/snowpack.config.js",
-		"build": "snowpack build --config ./config/snowpack.config.js",
-		"lint": "eslint ./src --ext .ts,.tsx --config ./config/.eslintrc",
-		"version": "auto-changelog -p && git add CHANGELOG.md",
-		"test": "echo 'skip'"
-	},
-	"author": "scottwestover",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/devshareacademy/typescript-snowpack-template.git"
-	},
-	"homepage": "https://github.com/devshareacademy/typescript-snowpack-template",
-	"devDependencies": {
-		"@types/jest": "27.0.1",
-		"@typescript-eslint/eslint-plugin": "4.31.0",
-		"@typescript-eslint/parser": "4.31.0",
-		"auto-changelog": "2.3.0",
-		"eslint": "7.32.0",
-		"eslint-config-prettier": "8.3.0",
-		"eslint-plugin-prettier": "4.0.0",
-		"jest": "27.1.0",
-		"prettier": "2.4.0",
-		"snowpack": "3.8.8",
-		"ts-jest": "27.0.5",
-		"typescript": "4.3.5"
-	},
-	"dependencies": {},
-	"resolutions": {},
-	"volta": {
-		"node": "16.9.0",
-		"yarn": "1.22.11"
-	},
-	"jest": {
-		"testEnvironment": "node",
-		"collectCoverageFrom": [
-			"src/**/*.ts"
-		],
-		"collectCoverage": false,
-		"coverageDirectory": "coverage",
-		"transform": {
-			"^.+\\.tsx?$": "ts-jest"
-		},
-		"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-		"moduleFileExtensions": [
-			"ts",
-			"js",
-			"json",
-			"node"
-		]
-	},
-	"auto-changelog": {
-		"template": "config/changelog-template.hbs",
-		"unreleased": true,
-		"commitLimit": false
-	}
+  "name": "badge-generator",
+  "version": "2.22.0",
+  "scripts": {
+    "lint:check": "vue-cli-service lint --no-fix --max-warnings 10",
+    "lint:fix": "vue-cli-service lint",
+    "compile": "tsc -p . --noEmit",
+    "test:unit": "vue-cli-service test:unit --detectOpenHandles",
+    "test:coverage": "vue-cli-service test:unit --detectOpenHandles --coverage",
+    "serve": "vue-cli-service serve",
+    "start": "yarn serve",
+    "build": "vue-cli-service build",
+    "preversion": "git pull --rebase && git fetch --tags && yarn lint:check && yarn test:unit",
+    "version": "yarn build",
+    "postversion": "git push --follow-tags --no-verify"
+  },
+  "dependencies": {
+    "markdown-it": "^13.0.1",
+    "vue": "^3.2.36",
+    "vue-router": "^4.0.8"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@types/markdown-it": "^12.2.3",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "@vue/cli-plugin-eslint": "~5.0.4",
+    "@vue/cli-plugin-router": "~5.0.4",
+    "@vue/cli-plugin-typescript": "~5.0.4",
+    "@vue/cli-plugin-unit-jest": "~5.0.4",
+    "@vue/cli-service": "~5.0.4",
+    "@vue/compiler-sfc": "^3.2.22",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^11.0.0",
+    "@vue/test-utils": "^2.0.0-0",
+    "@vue/vue3-jest": "^27.0.0",
+    "eslint": "^8.13.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^9.1.0",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.3",
+    "vue-jest": "^5.0.0-0",
+    "vue-plugin": "^0.0.1"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "author": "MichaelCurrin",
+  "license": "MIT",
+  "homepage": "https://github.com/MichaelCurrin/badge-generator#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MichaelCurrin/badge-generator"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
