@@ -1,7 +1,11 @@
 name: Pull Request Example
 
 on:
-
+  pull_request:
+    branches:
+      - main
+    paths:
+      - typescript-project/**
   workflow_dispatch:
 
 jobs:
@@ -13,14 +17,15 @@ jobs:
         working-directory: typescript-project
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
 
       # Setup Nodejs
-      - name: Step Node.js 18
+      - name: Setup Node.js 16
         uses: actions/setup-node@v2
         with:
-          node-version: "18.x"
+          node-version: "16.x"
           cache: 'npm'
+          cache-dependency-path: typescript-project/yarn.lock
 
       # Install Yarn
       - name: Install Yarn
@@ -33,13 +38,11 @@ jobs:
       # Run linting
       - name: Run linting
         run: yarn lint
+
       # Compile the code
       - name: Build project
         run: yarn build
 
-      #Run tests
-      - name: Run Tests
+      # Run tests
+      - name: Run tests
         run: yarn test
-
-
-
