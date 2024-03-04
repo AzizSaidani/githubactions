@@ -44,7 +44,7 @@
     "vue-plugin": "^0.0.1"
   },
   "engines": {
-    "node": "=>20"
+    "node": "hachem"
   },
   "author": "AzizSaidani",
   "license": "MIT",
