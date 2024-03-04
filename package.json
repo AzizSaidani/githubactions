@@ -44,7 +44,7 @@
     "vue-plugin": "^0.0.1"
   },
   "engines": {
-    "node": "hachem"
+    "node": "=>20"
   },
   "author": "MichaelCurrin",
   "license": "MIT",
