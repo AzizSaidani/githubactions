@@ -1,5 +1,5 @@
 {
-  "name": "badge-generator",
+  "name": "githubactions",
   "version": "2.22.0",
   "scripts": {
     "lint:check": "vue-cli-service lint --no-fix --max-warnings 10",
@@ -46,12 +46,12 @@
   "engines": {
     "node": "=>20"
   },
-  "author": "MichaelCurrin",
+  "author": "AzizSaidani",
   "license": "MIT",
-  "homepage": "https://github.com/MichaelCurrin/badge-generator#readme",
+  "homepage": "https://github.com/AzizSaidani/githubactions#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MichaelCurrin/badge-generator"
+    "url": "https://github.com/AzizSaidani/githubactions"
   },
   "browserslist": [
     "> 1%",
