@@ -16,7 +16,7 @@ jobs:
 
       # Setup Nodejs
       - name: Step Node.js 12
-        uses: actions/step-node@v1
+        uses: actions/setup-node@v1
         with:
           node-version: "12.x"
 
