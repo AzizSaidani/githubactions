@@ -1,26 +1,26 @@
-name: Cron Exemple
+name: Pull Request Exemple
 
 on:
-  schedule:
-    -cron: '* * * * *'
+
   workflow_dispatch:
 
 jobs:
-  run-integration-tests:
+  pull-request:
     runs-on: ubuntu-latest
 
     defaults:
       run:
-        working-directory: cron-example
+        working-directory: typescript-project
 
     steps:
       - uses: actions/checkout@v4
 
       # Setup Nodejs
       - name: Step Node.js 18
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: "18.x"
+          cache: 'npm'
 
       # Install Yarn
       - name: Install Yarn
@@ -29,6 +29,13 @@ jobs:
       # Install libraries
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+
+      # Run linting
+      - name: Run linting
+        run: yarn lint
+      # Compile the code
+      - name: Build project
+        run: yarn build
 
       #Run tests
       - name: Run Tests
