@@ -1,7 +1,7 @@
 # github Followers
 ![test](https://github.com/AzizSaidani/githubactions/actions/workflows/cron.yml/badge.svg?branch=master)
 ![test2](https://github.com/AzizSaidani/githubactions/actions/workflows/hello-world.yml/badge.svg?branch=master)
-![test24](https://github.com/AzizSaidani/githubactions/actions/workflows/bla.yml/badge.svg?branch=master)
+![test4](https://github.com/AzizSaidani/githubactions/actions/workflows/bla.yml/badge.svg?branch=master)
 
 ![test2](https://github.com/AzizSaidani/githubactions/actions/workflows/pull-request.yml/badge.svg?branch=master)
 ![test3](https://github.com/Wandalen/wTools/actions/workflows/ModuleModInterfacePush.yml/badge.svg?branch=master)
