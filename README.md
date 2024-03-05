@@ -1,5 +1,4 @@
-# github Followers
-[![GH Pages Deploy](https://github.com/MichaelCurrin/badge-generator/workflows/GH%20Pages%20Deploy/badge.svg)](https://github.com/MichaelCurrin/badge-generator/actions/workflows/main.yml "GitHub Actions workflow status")
+# action tests
 
 [![cron](https://github.com/AzizSaidani/githubactions/workflows/Cron%20Example/badge.svg)](https://github.com/AzizSaidani/githubactions/actions/workflows/cron.yml "GitHub Actions workflow status")
 [![hello world](https://github.com/AzizSaidani/githubactions/workflows/Hello%20World/badge.svg)](https://github.com/AzizSaidani/githubactions/actions/workflows/hello-world.yml "GitHub Actions workflow status")
