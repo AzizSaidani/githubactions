@@ -1,0 +1,38 @@
+name: Cron Example
+
+on:
+  # schedule:
+  #   - cron: "* * * * *"
+  workflow_dispatch:
+
+jobs:
+  run-integration-tests:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: cron-example
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Setup Nodejs
+      - name: Step Node.js 18
+        uses: actions/setup-node@v1
+        with:
+          node-version: "18.x"
+
+      # Install Yarn
+      - name: Install Yarn
+        run: npm install --global yarn
+
+      # Install libraries
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      #Run tests
+      - name: Run Tests
+        run: yarn test
+
+
+
